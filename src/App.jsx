@@ -20,7 +20,8 @@ export const App = () => {
 
     const onInputButtonClick = () => {
         const promptValue = prompt('Введите значение');
-        if (promptValue.length <= 3) {
+
+        if (!promptValue || promptValue.length <= 3) {
             setError('Введенное значение должно сожержать минимум 3 символа');
         } else {
             setError('');
